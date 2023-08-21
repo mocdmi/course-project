@@ -32,7 +32,7 @@ module.exports = {
         'no-shadow': 'off',
         'no-return-await': 'off',
         'no-underscore-dangle': 'off',
-        'max-len': ['error', { ignoreComments: true }],
+        'max-len': ['error', { code: 100, ignoreComments: true }],
         'react/react-in-jsx-scope': 'off',
         'react/function-component-definition': 'off',
         'react/jsx-indent': ['error', 4],

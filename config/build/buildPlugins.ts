@@ -2,7 +2,10 @@ import HTMLWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 import {
-    ProgressPlugin, WebpackPluginInstance, DefinePlugin, HotModuleReplacementPlugin,
+    DefinePlugin,
+    HotModuleReplacementPlugin,
+    ProgressPlugin,
+    WebpackPluginInstance,
 } from 'webpack';
 import { BuildOptions } from './types/config';
 
