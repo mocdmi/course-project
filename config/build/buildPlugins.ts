@@ -23,6 +23,6 @@ export function buildPlugins({ paths, isDev }: BuildOptions): WebpackPluginInsta
             __IS_DEV__: isDev,
         }),
         new HotModuleReplacementPlugin(),
-        new ReactRefreshWebpackPlugin(),
+        new ReactRefreshWebpackPlugin({ overlay: false }),
     ];
 }
