@@ -18,8 +18,15 @@ export const Sidebar: FC<SidebarProps> = (props) => {
     };
 
     return (
-        <div className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [className])}>
-            <button onClick={onToggle} type="button">
+        <div
+            data-testid="sidebar"
+            className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [className])}
+        >
+            <button
+                data-testid="sidebar-toggle"
+                onClick={onToggle}
+                type="button"
+            >
                 TOGGLE
             </button>
             <div className={cls.switchers}>

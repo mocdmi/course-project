@@ -23,7 +23,13 @@ module.exports = {
         'i18next',
     ],
     rules: {
-        'comma-dangle': ['error', 'always-multiline'],
+        'comma-dangle': ['error', {
+            arrays: 'always-multiline',
+            objects: 'always-multiline',
+            imports: 'always-multiline',
+            exports: 'always-multiline',
+            functions: 'never',
+        }],
         'object-curly-spacing': ['error', 'always'],
         indent: ['error', 4],
         'import/no-unresolved': 'off',
@@ -51,4 +57,12 @@ module.exports = {
     globals: {
         __IS_DEV__: true,
     },
+    overrides: [
+        {
+            files: ['**/src/**/*.test.{ts,tsx}'],
+            rules: {
+                'i18next/no-literal-string': 'off',
+            },
+        },
+    ],
 };
