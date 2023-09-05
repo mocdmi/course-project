@@ -25,7 +25,7 @@ export const Navbar: FC<NavbarProps> = (props) => {
                 </AppLink>
                 <AppLink
                     to={RouterPath.about}
-                    theme={AppLinkTheme.INVERTED}
+                    theme={AppLinkTheme.RED}
                 >
                     {t('О сайте')}
                 </AppLink>
