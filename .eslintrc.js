@@ -53,7 +53,13 @@ module.exports = {
         'react/require-default-props': 'off',
         'react/jsx-props-no-spreading': 'warn',
         'react/button-has-type': 'off',
-        'i18next/no-literal-string': ['error', { markupOnly: true }],
+        'i18next/no-literal-string': [
+            'error',
+            {
+                markupOnly: true,
+                ignoreAttribute: ['data-testid', 'to'],
+            },
+        ],
     },
     globals: {
         __IS_DEV__: true,
