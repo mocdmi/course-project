@@ -22,6 +22,7 @@ module.exports = {
         'react',
         '@typescript-eslint',
         'i18next',
+        'react-hooks',
     ],
     rules: {
         'comma-dangle': ['error', {
@@ -40,6 +41,8 @@ module.exports = {
         'no-return-await': 'off',
         'no-underscore-dangle': 'off',
         'max-len': ['error', { code: 100, ignoreComments: true }],
+        'jsx-a11y/no-static-element-interactions': 'off',
+        'jsx-a11y/click-events-have-key-events': 'off',
         'react/react-in-jsx-scope': 'off',
         'react/function-component-definition': 'off',
         'react/jsx-indent': ['error', 4],
@@ -60,6 +63,8 @@ module.exports = {
                 ignoreAttribute: ['data-testid', 'to'],
             },
         ],
+        'react-hooks/rules-of-hooks': 'error',
+        'react-hooks/exhaustive-deps': 'error',
     },
     globals: {
         __IS_DEV__: true,

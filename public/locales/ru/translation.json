@@ -7,5 +7,9 @@
   "throw error": "throw error",
   "Главная": "Главная",
   "О сайте": "О сайте",
-  "Toggle": "Toggle"
+  "Toggle": "Toggle",
+  "Войти": "Войти",
+  "Lorem ipsum dolor sit amet, consectetur adipisicing elit": {
+    "": "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+  }
 }

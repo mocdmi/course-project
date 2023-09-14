@@ -4,7 +4,7 @@ import { Theme } from 'app/providers/ThemeProvider';
 import { AppLink, AppLinkTheme } from './AppLink';
 
 const meta = {
-    title: 'widget/AppLink',
+    title: 'shared/AppLink',
     component: AppLink,
     args: {
         to: '/',
@@ -50,4 +50,12 @@ export const Red: Story = {
         children: 'Text',
         theme: AppLinkTheme.RED,
     },
+};
+
+export const RedDark: Story = {
+    args: {
+        children: 'Text',
+        theme: AppLinkTheme.RED,
+    },
+    decorators: [ThemeDecorator(Theme.DARK)],
 };

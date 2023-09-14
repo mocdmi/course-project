@@ -4,7 +4,7 @@ import { Theme } from 'app/providers/ThemeProvider';
 import { Loader } from './Loader';
 
 const meta = {
-    title: 'widget/Loader',
+    title: 'shared/Loader',
     component: Loader,
 };
 
