@@ -1,5 +1,12 @@
 {
   "Язык": "English",
   "Короткий язык": "En",
-  "Страница не найдена": "Page not found"
+  "Страница не найдена": "Page not found",
+  "Произошла непредвиденная ошибка": "Произошла непредвиденная ошибка",
+  "Обновить страницу": "Обновить страницу",
+  "throw error": "throw error",
+  "Главная": "Main",
+  "О сайте": "About",
+  "Войти": "Sign In",
+  "Lorem ipsum dolor sit amet, consectetur adipisicing elit": "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
 }
