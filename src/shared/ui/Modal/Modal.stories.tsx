@@ -1,4 +1,6 @@
 import { StoryObj } from '@storybook/react';
+import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator';
+import { Theme } from 'app/providers/ThemeProvider';
 import { Modal } from './Modal';
 
 const meta = {
@@ -20,4 +22,22 @@ export const Light: Story = {
         `,
         isOpen: true,
     },
+};
+
+export const Dark: Story = {
+    args: {
+        children: `
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            A aliquid blanditiis, cum exercitationem explicabo fugit ipsum
+            labore nulla odit rerum sapiente tempora veniam vitae voluptate voluptates!
+            Atque doloribus facere repudiandae!
+        `,
+        isOpen: true,
+    },
+    parameters: {
+        loki: {
+            skip: true,
+        },
+    },
+    decorators: [ThemeDecorator(Theme.DARK)],
 };

@@ -71,6 +71,7 @@ module.exports = {
                 'state',
             ],
         }],
+        'no-console': 'off',
     },
     globals: {
         __IS_DEV__: true,
