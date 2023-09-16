@@ -8,7 +8,11 @@
   "Главная": "Главная",
   "О сайте": "О сайте",
   "Войти": "Войти",
-  "Lorem ipsum dolor sit amet, consectetur adipisicing elit": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
   "decrement": "decrement",
-  "increment": "increment"
+  "increment": "increment",
+  "Введите username": "Введите username",
+  "Введите пароль": "Введите пароль",
+  "Lorem ipsum dolor sit amet, consectetur adipisicing elit": {
+    "": "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+  }
 }
