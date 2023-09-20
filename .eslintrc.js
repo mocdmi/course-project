@@ -40,7 +40,7 @@ module.exports = {
         'no-shadow': 'off',
         'no-return-await': 'off',
         'no-underscore-dangle': 'off',
-        'max-len': ['error', { code: 100, ignoreComments: true }],
+        'max-len': ['error', { code: 120, ignoreComments: true }],
         'jsx-a11y/no-static-element-interactions': 'off',
         'jsx-a11y/click-events-have-key-events': 'off',
         'react/react-in-jsx-scope': 'off',

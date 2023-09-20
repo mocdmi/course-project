@@ -14,5 +14,8 @@
   "Введите пароль": "Введите пароль",
   "Lorem ipsum dolor sit amet, consectetur adipisicing elit": {
     "": "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
-  }
+  },
+  "Форма авторизации": "Форма авторизации",
+  "Вы ввели неверный логин или пароль": "Вы ввели неверный логин или пароль",
+  "Выйти": "Выйти"
 }

@@ -1,5 +1,5 @@
 import { StoryObj } from '@storybook/react';
-import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator';
+import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
 import { Button, ButtonSize, ButtonTheme } from './Button';
 
@@ -149,4 +149,21 @@ export const SquareSizeXL: Story = {
         size: ButtonSize.XL,
         square: true,
     },
+};
+
+export const Disabled: Story = {
+    args: {
+        children: 'Text',
+        theme: ButtonTheme.OUTLINE,
+        disabled: true,
+    },
+};
+
+export const DisabledDark: Story = {
+    args: {
+        children: 'Text',
+        theme: ButtonTheme.OUTLINE,
+        disabled: true,
+    },
+    decorators: [ThemeDecorator(Theme.DARK)],
 };
