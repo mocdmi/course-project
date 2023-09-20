@@ -26,6 +26,11 @@ export const PrimaryDark: Story = {
     args: {
         isOpen: true,
     },
+    parameters: {
+        loki: {
+            skip: true,
+        },
+    },
     decorators: [
         ThemeDecorator(Theme.DARK),
         StoreDecorator({ loginForm: { username: 'admin', password: '123' } }),
