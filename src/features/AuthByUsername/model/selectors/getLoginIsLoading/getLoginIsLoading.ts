@@ -3,5 +3,5 @@ import { getLogin } from '../getLogin/getLogin';
 
 export const getLoginIsLoading = createSelector(
     getLogin,
-    (login) => login.isLoading
+    (loginForm) => loginForm?.isLoading || false
 );

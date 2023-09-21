@@ -65,13 +65,8 @@ module.exports = {
         ],
         'react-hooks/rules-of-hooks': 'error',
         'react-hooks/exhaustive-deps': 'error',
-        'no-param-reassign': ['error', {
-            props: true,
-            ignorePropertyModificationsFor: [
-                'state',
-            ],
-        }],
         'no-console': 'off',
+        'no-param-reassign': 'off',
     },
     globals: {
         __IS_DEV__: true,

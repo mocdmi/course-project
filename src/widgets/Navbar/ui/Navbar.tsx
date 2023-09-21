@@ -1,4 +1,4 @@
-import { FC, useCallback, useState } from 'react';
+import { useCallback, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
@@ -11,7 +11,7 @@ interface NavbarProps {
     className?: string;
 }
 
-export const Navbar: FC<NavbarProps> = (props) => {
+export const Navbar = (props: NavbarProps) => {
     const { className } = props;
     const dispatch = useDispatch();
     const { t } = useTranslation();
@@ -56,12 +56,9 @@ export const Navbar: FC<NavbarProps> = (props) => {
                 >
                     {t('Войти')}
                 </Button>
-                <LoginModal
-                    isOpen={isAuthModal}
-                    onClose={onCloseModal}
-                >
-                    {t('Lorem ipsum dolor sit amet, consectetur adipisicing elit.')}
-                </LoginModal>
+                { isAuthModal && (
+                    <LoginModal isOpen={isAuthModal} onClose={onCloseModal} />
+                )}
             </div>
         </div>
     );

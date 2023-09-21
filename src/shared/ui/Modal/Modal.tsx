@@ -1,5 +1,5 @@
 import React, {
-    FC, ReactNode, useState, useRef, useEffect, useCallback,
+    ReactNode, useState, useRef, useEffect, useCallback,
 } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Portal } from 'shared/ui/Portal/Portal';
@@ -15,7 +15,7 @@ interface ModalProps {
 
 const ANIMATION_DELAY = 300;
 
-export const Modal: FC<ModalProps> = (props) => {
+export const Modal = (props: ModalProps) => {
     const {
         className,
         children,

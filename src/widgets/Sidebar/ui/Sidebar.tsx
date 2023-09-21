@@ -1,4 +1,4 @@
-import { FC, useState } from 'react';
+import { useState } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Button, ButtonSize, ButtonTheme } from 'shared/ui/Button/Button';
 import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
@@ -14,7 +14,7 @@ interface SidebarProps {
     className?: string;
 }
 
-export const Sidebar: FC<SidebarProps> = (props) => {
+export const Sidebar = (props: SidebarProps) => {
     const { className } = props;
     const { t } = useTranslation();
 

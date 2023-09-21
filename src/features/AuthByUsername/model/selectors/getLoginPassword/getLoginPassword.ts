@@ -3,5 +3,5 @@ import { getLogin } from '../getLogin/getLogin';
 
 export const getLoginPassword = createSelector(
     getLogin,
-    (login) => login.password
+    (loginForm) => loginForm?.password || ''
 );
