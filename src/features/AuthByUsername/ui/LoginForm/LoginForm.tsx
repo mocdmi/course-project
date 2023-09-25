@@ -6,7 +6,7 @@ import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { Input } from 'shared/ui/Input/Input';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
-import { getLoginForm } from '../../model/selectors/getLoginError/getLoginForm';
+import { getLoginError } from '../../model/selectors/getLoginError/getLoginError';
 import { loginActions, loginReducer } from '../../model/slice/loginSlice';
 import { loginByUsername } from '../../model/services/loginByUsername';
 import { getLoginUsername } from '../../model/selectors/getLoginUsername/getLoginUsername';
@@ -28,7 +28,7 @@ const LoginForm = memo((props: LoginFormProps) => {
     const username = useSelector(getLoginUsername);
     const password = useSelector(getLoginPassword);
     const isLoading = useSelector(getLoginIsLoading);
-    const error = useSelector(getLoginForm);
+    const error = useSelector(getLoginError);
     const dispatch = useDispatch();
 
     const onChangeUsername = useCallback((value: string) => {

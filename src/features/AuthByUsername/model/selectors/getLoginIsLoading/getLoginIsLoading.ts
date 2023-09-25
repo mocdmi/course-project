@@ -1,7 +1,7 @@
 import { createSelector } from '@reduxjs/toolkit';
-import { getLogin } from '../getLogin/getLogin';
+import { getLoginForm } from '../getLoginForm/getLoginForm';
 
 export const getLoginIsLoading = createSelector(
-    getLogin,
+    getLoginForm,
     (loginForm) => loginForm?.isLoading || false
 );
