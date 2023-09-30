@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react';
+import { memo, useCallback, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
@@ -11,7 +11,7 @@ interface NavbarProps {
     className?: string;
 }
 
-export const Navbar = (props: NavbarProps) => {
+export const Navbar = memo((props: NavbarProps) => {
     const { className } = props;
     const dispatch = useDispatch();
     const { t } = useTranslation();
@@ -62,4 +62,4 @@ export const Navbar = (props: NavbarProps) => {
             </div>
         </div>
     );
-};
+});

@@ -25,5 +25,14 @@
       "password": "123"
     }
   ],
-  "profile": { "name": "typicode" }
+  "profile": {
+    "first": "Дмитрий",
+    "lastname": "Мосин",
+    "age": 36,
+    "currency": "RUB",
+    "country": "Russia",
+    "city": "Cherepovets",
+    "username": "admin",
+    "avatar": ""
+  }
 }
