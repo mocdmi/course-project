@@ -13,7 +13,10 @@ const userSlice = createSlice({
         },
         initAuthData: (state) => {
             const user = localStorage.getItem(USER_LOCAL_STORAGE_KEY);
-            state.authData = JSON.parse(user);
+
+            if (user) {
+                state.authData = JSON.parse(user);
+            }
         },
         logout: (state) => {
             state.authData = undefined;
