@@ -6,23 +6,18 @@ import { Input } from './Input';
 const meta = {
     title: 'shared/Input',
     component: Input,
+    args: {
+        placeholder: 'Type text',
+        value: '123456',
+    },
 };
 
 export default meta;
 
 type Story = StoryObj<typeof Input>;
 
-export const Primary: Story = {
-    args: {
-        placeholder: 'Type text',
-        value: '123456',
-    },
-};
+export const Primary: Story = {};
 
 export const PrimaryDark: Story = {
-    args: {
-        placeholder: 'Type text',
-        value: '123456',
-    },
     decorators: [ThemeDecorator(Theme.DARK)],
 };

@@ -6,9 +6,6 @@ import { Text, TextTheme } from './Text';
 const meta = {
     title: 'shared/Text',
     component: Text,
-    args: {
-        to: '/',
-    },
 };
 
 export default meta;

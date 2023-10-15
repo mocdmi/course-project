@@ -8,6 +8,7 @@ const meta = {
     component: AppLink,
     args: {
         to: '/',
+        children: 'Text',
     },
 };
 
@@ -17,14 +18,12 @@ type Story = StoryObj<typeof AppLink>;
 
 export const Primary: Story = {
     args: {
-        children: 'Text',
         theme: AppLinkTheme.PRIMARY,
     },
 };
 
 export const PrimaryDark: Story = {
     args: {
-        children: 'Text',
         theme: AppLinkTheme.PRIMARY,
     },
     decorators: [ThemeDecorator(Theme.DARK)],
@@ -32,14 +31,12 @@ export const PrimaryDark: Story = {
 
 export const Inverted: Story = {
     args: {
-        children: 'Text',
         theme: AppLinkTheme.INVERTED,
     },
 };
 
 export const InvertedDark: Story = {
     args: {
-        children: 'Text',
         theme: AppLinkTheme.INVERTED,
     },
     decorators: [ThemeDecorator(Theme.DARK)],
@@ -47,14 +44,12 @@ export const InvertedDark: Story = {
 
 export const Red: Story = {
     args: {
-        children: 'Text',
         theme: AppLinkTheme.RED,
     },
 };
 
 export const RedDark: Story = {
     args: {
-        children: 'Text',
         theme: AppLinkTheme.RED,
     },
     decorators: [ThemeDecorator(Theme.DARK)],

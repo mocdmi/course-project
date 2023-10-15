@@ -1,17 +1,20 @@
 import React, {
     InputHTMLAttributes, memo, useEffect, useRef, useState,
 } from 'react';
-import { classNames } from 'shared/lib/classNames/classNames';
+import { classNames, Mods } from 'shared/lib/classNames/classNames';
+import { types } from 'sass';
 import cls from './Input.module.scss';
+import String = types.String;
 
 type HTMLInputProps = Omit<
     InputHTMLAttributes<HTMLInputElement>,
-    'value' | 'autoFocus' | 'onChange'>;
+    'value' | 'autoFocus' | 'onChange' | 'readOnly'>;
 
 interface InputProps extends HTMLInputProps{
     className?: string;
-    value?: string;
+    value?: string | number;
     autoFocus?: boolean;
+    readonly?: boolean;
     onChange?: (value: string) => void;
 }
 
@@ -22,6 +25,7 @@ export const Input = memo((props: InputProps) => {
         type = 'text',
         placeholder,
         autoFocus,
+        readonly,
         onChange,
         ...otherProps
     } = props;
@@ -31,7 +35,7 @@ export const Input = memo((props: InputProps) => {
 
     const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
         onChange?.(e.target.value);
-        setCaretPosition(e.target.value.length);
+        setCaretPosition(value?.toString().length || 0);
     };
 
     const onSelect = (e: any) => {
@@ -44,8 +48,12 @@ export const Input = memo((props: InputProps) => {
         }
     }, [autoFocus]);
 
+    const mods: Mods = {
+        [cls.readonly]: readonly,
+    };
+
     return (
-        <div className={classNames(cls.InputWrapper, {}, [className])}>
+        <div className={classNames(cls.InputWrapper, mods, [className])}>
             { placeholder && (
                 <div className={cls.placeholder}>
                     {`${placeholder}>`}
@@ -57,6 +65,7 @@ export const Input = memo((props: InputProps) => {
                     type={type}
                     value={value}
                     className={cls.input}
+                    readOnly={readonly}
                     onChange={onChangeHandler}
                     onSelect={onSelect}
                     {...otherProps}
