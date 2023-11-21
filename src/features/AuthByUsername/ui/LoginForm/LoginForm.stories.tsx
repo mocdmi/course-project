@@ -7,41 +7,23 @@ import LoginForm from './LoginForm';
 const meta = {
     title: 'features/LoginForm',
     component: LoginForm,
+    decorators: [StoreDecorator({ loginForm: { username: 'admin', password: '123' } })],
 };
 
 export default meta;
 
 type Story = StoryObj<typeof LoginForm>;
 
-export const Primary: Story = {
-    decorators: [StoreDecorator({ loginForm: { username: 'admin', password: '123' } })],
-};
+export const Light: Story = {};
 
-export const PrimaryDark: Story = {
-    decorators: [
-        ThemeDecorator(Theme.DARK),
-        StoreDecorator({ loginForm: { username: 'admin', password: '123' } }),
-    ],
+export const Dark: Story = {
+    decorators: [ThemeDecorator(Theme.DARK)],
 };
 
 export const WithError: Story = {
     decorators: [StoreDecorator({ loginForm: { username: 'admin', password: '123', error: 'Error' } })],
 };
 
-export const WithErrorDark: Story = {
-    decorators: [
-        ThemeDecorator(Theme.DARK),
-        StoreDecorator({ loginForm: { username: 'admin', password: '123', error: 'Error' } }),
-    ],
-};
-
 export const Loading: Story = {
     decorators: [StoreDecorator({ loginForm: { username: 'admin', password: '123', isLoading: true } })],
-};
-
-export const LoadingDark: Story = {
-    decorators: [
-        ThemeDecorator(Theme.DARK),
-        StoreDecorator({ loginForm: { username: 'admin', password: '123', isLoading: true } }),
-    ],
 };

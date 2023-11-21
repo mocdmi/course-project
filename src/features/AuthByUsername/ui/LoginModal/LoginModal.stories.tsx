@@ -7,32 +7,23 @@ import { LoginModal } from './LoginModal';
 const meta = {
     title: 'features/LoginModal',
     component: LoginModal,
+    args: {
+        isOpen: true,
+    },
+    decorators: [StoreDecorator({ loginForm: { username: 'admin', password: '123' } })],
 };
 
 export default meta;
 
 type Story = StoryObj<typeof LoginModal>;
 
-export const Primary: Story = {
-    args: {
-        isOpen: true,
-    },
-    decorators: [
-        StoreDecorator({ loginForm: { username: 'admin', password: '123' } }),
-    ],
-};
+export const Light: Story = {};
 
-export const PrimaryDark: Story = {
-    args: {
-        isOpen: true,
-    },
+export const Dark: Story = {
     parameters: {
         loki: {
             skip: true,
         },
     },
-    decorators: [
-        ThemeDecorator(Theme.DARK),
-        StoreDecorator({ loginForm: { username: 'admin', password: '123' } }),
-    ],
+    decorators: [ThemeDecorator(Theme.DARK)],
 };

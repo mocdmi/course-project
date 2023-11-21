@@ -4,7 +4,7 @@ import { Theme } from 'app/providers/ThemeProvider';
 import { LangSwitcher } from './LangSwitcher';
 
 const meta = {
-    title: 'widget/LangSwitcher',
+    title: 'entities/LangSwitcher',
     component: LangSwitcher,
 };
 

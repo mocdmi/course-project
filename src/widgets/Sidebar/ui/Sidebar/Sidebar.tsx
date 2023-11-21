@@ -1,8 +1,8 @@
 import { useState, memo } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Button, ButtonSize, ButtonTheme } from 'shared/ui/Button/Button';
-import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
-import { LangSwitcher } from 'widgets/LangSwitcher';
+import { ThemeSwitcher } from 'entities/ThemeSwitcher';
+import { LangSwitcher } from 'entities/LangSwitcher';
 import { sidebarItemsList } from 'widgets/Sidebar/model/items';
 import { SidebarItem } from '../SidebarItem/SidebarItem';
 import cls from './Sidebar.module.scss';

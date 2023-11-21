@@ -1,8 +1,8 @@
 import { ReactElement } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 
-export const RouterDecorator = (story: () => ReactElement) => (
+export const RouterDecorator = (StoryComponent: () => ReactElement) => (
     <BrowserRouter>
-        {story()}
+        <StoryComponent />
     </BrowserRouter>
 );

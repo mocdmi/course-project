@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import { memo, Suspense, useMemo } from 'react';
 import { routeConfig } from 'shared/config/routeConfig/routeConfig';
-import { PageLoader } from 'widgets/PageLoader';
+import { PageLoader } from 'shared/ui/PageLoader';
 import { useSelector } from 'react-redux';
 import { getUserAuthData } from 'entities/User';
 
