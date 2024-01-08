@@ -2,9 +2,7 @@ import React, {
     InputHTMLAttributes, memo, useEffect, useRef, useState,
 } from 'react';
 import { classNames, Mods } from 'shared/lib/classNames/classNames';
-import { types } from 'sass';
 import cls from './Input.module.scss';
-import String = types.String;
 
 type HTMLInputProps = Omit<
     InputHTMLAttributes<HTMLInputElement>,
