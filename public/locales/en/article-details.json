@@ -1,3 +1,6 @@
 {
-  "Статья": "Article"
+  "Статья": "Article",
+  "Статья не найдена": "Article not found",
+  "При загрузке статьи произошла ошибка": "Error on article load",
+  "Комментарии": "Comments"
 }
